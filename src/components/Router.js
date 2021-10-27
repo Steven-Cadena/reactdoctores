@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import EliminarDoctor from './Doctores/EliminarDoctor';
 import InsertarDoctor from './Doctores/InsertarDoctor';
 import MenuDoctores from './Doctores/MenuDoctores';
 import Tabladoctores from './Doctores/Tabladoctores';
@@ -20,7 +21,16 @@ export default class Router extends Component {
                     var idDoc = props.match.params.iddoctor;
                     return(<UpdateDoctor iddoctor={idDoc}/>);
                 }}/>
-                <Route exact path="/deletedoctor"/>
+                <Route exact path="/deletedoctor/:iddoctor/:apellido"
+                    render={props => {
+                        var id = props.match.params.iddoctor;
+                        var ape = props.match.params.apellido;
+                        return (<EliminarDoctor
+                            iddoctor={id}
+                            apellido={ape}
+                        />)
+                }}
+                />
                 </Switch>
             </BrowserRouter>
         )

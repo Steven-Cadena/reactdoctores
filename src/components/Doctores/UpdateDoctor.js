@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import Global from '../Global';
+import { Redirect } from 'react-router';
 
 export default class UpdateDoctor extends Component {
 
@@ -56,7 +57,9 @@ export default class UpdateDoctor extends Component {
     }
 
     render() {
-
+        if (this.state.status == true){
+            return (<Redirect to={"/doctores"}/>)
+        }
         if (this.state.doctor != null){
             return (
                 <div>

@@ -52,12 +52,12 @@ export default class Tabladoctores extends Component {
                                             Editar Doctor
                                         </NavLink>
                                         <NavLink to={"/updatedoctor/" + doc.idDoctor} 
+                                        className="btn btn-info">
+                                            Modificar Doctor
+                                        </NavLink>
+                                        <NavLink to={"/deletedoctor/" + doc.idDoctor + "/ "+ doc.apellido} 
                                         className="btn btn-danger">
                                             Eliminar Doctor
-                                        </NavLink>
-                                        <NavLink to={"/updatedoctor/" + doc.idDoctor} 
-                                        className="btn btn-success">
-                                            Modificar Doctor
                                         </NavLink>
                                     </td>
                                     </tr>);
