@@ -1,12 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './components/App/App';
 import reportWebVitals from './reportWebVitals';
+import $ from "jquery";
+import Popper from 'popper.js';
+import "bootstrap/dist/js/bootstrap.bundle";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Router from './components/Router';
+import Tabladoctores from './components/App/Doctores/Tabladoctores';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router/>
+    {/* <Tabladoctores/> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
