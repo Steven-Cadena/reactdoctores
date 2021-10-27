@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { Component } from 'react'
 import { Redirect } from 'react-router';
-import Global from '../../Global';
+import Global from '../Global';
 
 export default class InsertarDoctor extends Component {
 

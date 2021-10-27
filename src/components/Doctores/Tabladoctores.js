@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-import Global from '../../Global';
+import Global from './../Global';
 import { NavLink } from 'react-router-dom';
 
 export default class Tabladoctores extends Component {
@@ -50,6 +50,14 @@ export default class Tabladoctores extends Component {
                                         <NavLink to={"/updatedoctor/" + doc.idDoctor} 
                                         className="btn btn-success">
                                             Editar Doctor
+                                        </NavLink>
+                                        <NavLink to={"/updatedoctor/" + doc.idDoctor} 
+                                        className="btn btn-danger">
+                                            Eliminar Doctor
+                                        </NavLink>
+                                        <NavLink to={"/updatedoctor/" + doc.idDoctor} 
+                                        className="btn btn-success">
+                                            Modificar Doctor
                                         </NavLink>
                                     </td>
                                     </tr>);
